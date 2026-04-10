@@ -1644,7 +1644,7 @@ export default function App() {
   const [searchStation, setSearchStation] = useState(null);
 
   useEffect(() => {
-    fetch("/dashboard_payload.json")
+    fetch(`${process.env.PUBLIC_URL}/dashboard_payload.json`)
       .then(r => r.json())
       .then(d => setData(d))
       .catch(e => console.error("Load error:", e));
